@@ -56,6 +56,7 @@ libmesautil_la_LIBADD = \
 	$(ZLIB_LIBS) \
 	$(LIBATOMIC_LIBS)
 
+if HAVE_DRICOMMON
 libxmlconfig_la_SOURCES = $(XMLCONFIG_FILES)
 libxmlconfig_la_CFLAGS = \
 	$(DEFINES) \
@@ -65,6 +66,7 @@ libxmlconfig_la_CFLAGS = \
 	$(VISIBILITY_CFLAGS) \
 	$(EXPAT_CFLAGS)
 libxmlconfig_la_LIBADD = $(EXPAT_LIBS) -lm
+endif
 
 sysconf_DATA = drirc
 
