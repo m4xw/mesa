@@ -29,7 +29,7 @@ endif
 
 ## nouveau
 if HAVE_GALLIUM_NOUVEAU
-SUBDIRS += drivers/nouveau winsys/nouveau/drm
+SUBDIRS += drivers/nouveau
 endif
 
 ## vmwgfx/svga
