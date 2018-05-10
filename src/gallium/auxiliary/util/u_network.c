@@ -10,7 +10,8 @@
 #  include <windows.h>
 #  include <ws2tcpip.h>
 #elif defined(PIPE_OS_LINUX) || defined(PIPE_OS_HAIKU) || \
-   defined(PIPE_OS_APPLE) || defined(PIPE_OS_CYGWIN) || defined(PIPE_OS_SOLARIS)
+   defined(PIPE_OS_APPLE) || defined(PIPE_OS_CYGWIN) || \
+   defined(PIPE_OS_SOLARIS) || defined(PIPE_OS_SWITCH)
 #  include <sys/socket.h>
 #  include <netinet/in.h>
 #  include <unistd.h>
