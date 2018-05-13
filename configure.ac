@@ -2694,6 +2694,9 @@ if test -n "$with_gallium_drivers"; then
                 require_basic_egl "virgl"
             fi
             ;;
+        xnvnx)
+            HAVE_GALLIUM_NVNX=yes
+            ;;
         *)
             AC_MSG_ERROR([Unknown Gallium driver: $driver])
             ;;
@@ -2802,7 +2805,7 @@ if test "x$enable_llvm" = xyes; then
     fi
 
     dnl The gallium-xlib GLX and gallium OSMesa targets directly embed the
-    dnl swr/llvmpipe driver into the final binary.  Adding LLVM_LIBS results in 
+    dnl swr/llvmpipe driver into the final binary.  Adding LLVM_LIBS results in
     dnl the LLVM library propagated in the Libs.private of the respective .pc
     dnl file which ensures complete dependency information when statically
     dnl linking.
@@ -2986,6 +2989,7 @@ AC_CONFIG_FILES([Makefile
                  src/gallium/drivers/vc4/Makefile
                  src/gallium/drivers/vc5/Makefile
                  src/gallium/drivers/virgl/Makefile
+                 src/gallium/drivers/nvnx/Makefile
                  src/gallium/state_trackers/clover/Makefile
                  src/gallium/state_trackers/dri/Makefile
                  src/gallium/state_trackers/glx/xlib/Makefile
